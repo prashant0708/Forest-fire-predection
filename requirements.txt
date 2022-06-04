@@ -1,7 +1,6 @@
 Flask
 numpy
 pandas
-pickle
 sklearn
 scipy
 scikit-learn
