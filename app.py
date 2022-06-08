@@ -2,6 +2,7 @@ import pickle
 from flask import Flask , request,app,jsonify,url_for,render_template
 import numpy as np
 import pandas as pd
+import os 
 
 app= Flask (__name__)
 model=pickle.load(open('model1.pkl','rb'))
@@ -40,4 +41,4 @@ def predict():
         return str(e)
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(host="0.0.0.0",debug=True,port=os.environ['PORT'])
